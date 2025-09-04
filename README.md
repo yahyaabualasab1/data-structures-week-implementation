@@ -144,3 +144,35 @@ Time Complexity:
 addEdge → O(1)
 dfs / bfs / printGraph → O(V + E)
 
+# Day5
+## 1. Trie
+   Description: A prefix tree for storing words. Supports insert, search, and startsWith.
+   Example code:
+   trie.insert("apple");
+   trie.insert("app");
+   trie.search("apple"); // true
+   trie.search("ap"); // false
+   trie.startsWith("ap"); // true
+   Time Complexity:
+   insert / search / startsWith → O(m) (m = word/prefix length)
+## 2.  Union-Find (Disjoint Set)
+    Description: A data structure for managing disjoint sets using Path Compression and Union by Rank.
+    Supports find, union, and connected.
+    Example code:
+    uf.union(0, 1);
+    uf.union(1, 2);
+    uf.connected(0, 2); // true
+    uf.connected(0, 3); // false
+    Time Complexity:
+    find / union / connected → O(α(n)) ~ O(1) (practically)
+## 3.  Graph Traversal (BFS & DFS)
+    Description: Graph using Adjacency List, supports: addEdge, DFS, BFS, and printGraph.
+    Example Code:
+    g.addEdge(0, 1); g.addEdge(0, 4); g.addEdge(1, 2);
+    g.addEdge(1, 3); g.addEdge(1, 4); g.addEdge(2, 3); g.addEdge(3, 4);
+    g.printGraph();
+    g.DFS(0);
+    g.BFS(0);
+    Time Complexity:
+    addEdge → O(1)
+    DFS / BFS → O(V + E)
